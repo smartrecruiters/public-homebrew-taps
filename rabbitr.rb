@@ -2,16 +2,16 @@
 class Rabbitr < Formula
   desc "rabbitr - CLI tool for RabbitMQ management"
   homepage "https://github.com/smartrecruiters/rabbitr"
-  version "1.2.0"
+  version "1.2.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/smartrecruiters/rabbitr/releases/download/1.2.0/rabbitr_1.2.0_darwin_amd64.tar.gz"
-    sha256 "3116e43ca410dae27a278de7ece5226db1fe0d7bf3e4d49dc1e853340cdce133"
+    url "https://github.com/smartrecruiters/rabbitr/releases/download/1.2.1/rabbitr_1.2.1_darwin_amd64.tar.gz"
+    sha256 "42cb3db192df5e6ab85af5fcfaedc6c737fd71214ccc8a672b6d99b5a912e60e"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/smartrecruiters/rabbitr/releases/download/1.2.0/rabbitr_1.2.0_linux_amd64.tar.gz"
-      sha256 "ac15746fe4ac987e98a57bca6f1fcc05e68b0574f21ab682423abedeae9b2084"
+      url "https://github.com/smartrecruiters/rabbitr/releases/download/1.2.1/rabbitr_1.2.1_linux_amd64.tar.gz"
+      sha256 "049bb5ed35a148141674528e4d638c7d903b8410d853e75a005ed2e07427a56a"
     end
   end
 
