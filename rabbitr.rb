@@ -6,7 +6,6 @@ class Rabbitr < Formula
   desc "rabbitr - CLI tool for RabbitMQ management"
   homepage "https://github.com/smartrecruiters/rabbitr"
   version "1.3.2"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/smartrecruiters/rabbitr/releases/download/1.3.2/rabbitr_1.3.2_darwin_amd64.tar.gz"
