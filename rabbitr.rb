@@ -5,15 +5,19 @@
 class Rabbitr < Formula
   desc "rabbitr - CLI tool for RabbitMQ management"
   homepage "https://github.com/smartrecruiters/rabbitr"
-  version "1.3.2"
+  version "1.3.3"
 
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/smartrecruiters/rabbitr/releases/download/1.3.3/rabbitr_1.3.3_darwin_arm64.tar.gz"
+    sha256 "cd7ced869db7a2a365a9048830e19df552a04f41de7e3b2bb151288203bdeb64"
+  end  
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/smartrecruiters/rabbitr/releases/download/1.3.2/rabbitr_1.3.2_darwin_amd64.tar.gz"
-    sha256 "7170bdfa7d6ae388ff6f24aa88f9f5864c3dbbb106c9af8e67dc549edccbefa5"
+    url "https://github.com/smartrecruiters/rabbitr/releases/download/1.3.3/rabbitr_1.3.3_darwin_amd64.tar.gz"
+    sha256 "6309027d40222b738b2de1c36b4118e81d7dea8da669cdef8341143b1ac8110f"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/smartrecruiters/rabbitr/releases/download/1.3.2/rabbitr_1.3.2_linux_amd64.tar.gz"
-    sha256 "09578e2bed47221a0ecdd246907618161fc69d805bd05ed844d37211d0c753ca"
+    url "https://github.com/smartrecruiters/rabbitr/releases/download/1.3.3/rabbitr_1.3.3_linux_amd64.tar.gz"
+    sha256 "04dc807b08eede410b5ce246274fd3a186157b7c6bcb796cfd4227a1a2fc5613"
   end
 
   def install
