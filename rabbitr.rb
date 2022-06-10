@@ -7,20 +7,41 @@ class Rabbitr < Formula
   homepage "https://github.com/smartrecruiters/rabbitr"
   version "1.3.3"
 
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/smartrecruiters/rabbitr/releases/download/1.3.3/rabbitr_1.3.3_darwin_arm64.tar.gz"
-    sha256 "cd7ced869db7a2a365a9048830e19df552a04f41de7e3b2bb151288203bdeb64"
-  end  
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/smartrecruiters/rabbitr/releases/download/1.3.3/rabbitr_1.3.3_darwin_amd64.tar.gz"
-    sha256 "6309027d40222b738b2de1c36b4118e81d7dea8da669cdef8341143b1ac8110f"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/smartrecruiters/rabbitr/releases/download/1.3.3/rabbitr_1.3.3_linux_amd64.tar.gz"
-    sha256 "04dc807b08eede410b5ce246274fd3a186157b7c6bcb796cfd4227a1a2fc5613"
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/smartrecruiters/rabbitr/releases/download/1.3.3/rabbitr_1.3.3_darwin_arm64.tar.gz"
+      sha256 "eb982bd7d26ad77658f7fc91ac3b4c2fcdeb6572ed53940e4c2ab6324726c300"
+
+      def install
+        bin.install "rabbitr"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/smartrecruiters/rabbitr/releases/download/1.3.3/rabbitr_1.3.3_darwin_amd64.tar.gz"
+      sha256 "a3878a72ba69f9c34b5213d93447bbe2ae9d1fffe09ca301c2ef690c205eaf3c"
+
+      def install
+        bin.install "rabbitr"
+      end
+    end
   end
 
-  def install
-    bin.install "rabbitr"
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/smartrecruiters/rabbitr/releases/download/1.3.3/rabbitr_1.3.3_linux_arm64.tar.gz"
+      sha256 "9f046c58fe01ab4039ec5cea17588034695138abafb348eca743ed7208e3df0d"
+
+      def install
+        bin.install "rabbitr"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/smartrecruiters/rabbitr/releases/download/1.3.3/rabbitr_1.3.3_linux_amd64.tar.gz"
+      sha256 "34ba8e31afac5a47605b004dfcb8d1e8d4c3af8a31d72aedba9eac2aa58e8ed6"
+
+      def install
+        bin.install "rabbitr"
+      end
+    end
   end
 end
