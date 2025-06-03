@@ -5,20 +5,20 @@
 class Rabbitr < Formula
   desc "rabbitr - CLI tool for RabbitMQ management"
   homepage "https://github.com/smartrecruiters/rabbitr"
-  version "1.5.0"
+  version "1.6.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/smartrecruiters/rabbitr/releases/download/1.5.0/rabbitr_1.5.0_darwin_amd64.tar.gz"
-      sha256 "5a06b6c9e7a880d9dc8a9a6862b5655d18f325277aeb24edc76fb3d4dd5f0b8f"
+      url "https://github.com/smartrecruiters/rabbitr/releases/download/1.6.0/rabbitr_1.6.0_darwin_amd64.tar.gz"
+      sha256 "219a5978e1aacea61379165622e7345858f7eff0f3d6ea8649467f49cc6a6c5a"
 
       def install
         bin.install "rabbitr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/smartrecruiters/rabbitr/releases/download/1.5.0/rabbitr_1.5.0_darwin_arm64.tar.gz"
-      sha256 "fe87f9849dec76d1e6bca8703cea9e6c5ae023535b1299bc927c2895abe7a559"
+      url "https://github.com/smartrecruiters/rabbitr/releases/download/1.6.0/rabbitr_1.6.0_darwin_arm64.tar.gz"
+      sha256 "7274a1ed32f84b7559a0a9515e1e62e966de92872ca9391144139dac5d1784ed"
 
       def install
         bin.install "rabbitr"
@@ -29,8 +29,8 @@ class Rabbitr < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/smartrecruiters/rabbitr/releases/download/1.5.0/rabbitr_1.5.0_linux_amd64.tar.gz"
-        sha256 "74af7f2376933293a3245d4371525fb7e2ce84f594e61722972dc8bc4d45f5c0"
+        url "https://github.com/smartrecruiters/rabbitr/releases/download/1.6.0/rabbitr_1.6.0_linux_amd64.tar.gz"
+        sha256 "eb32ad0ea48e8a772e27a36664dcf5358b19293eb45ee5d6e9271ca85ba881f8"
 
         def install
           bin.install "rabbitr"
@@ -39,8 +39,8 @@ class Rabbitr < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/smartrecruiters/rabbitr/releases/download/1.5.0/rabbitr_1.5.0_linux_arm64.tar.gz"
-        sha256 "54f918d04c780d2ff30fd2fc10ca92a7a538237124d0b68fdf3d86c51f25f7c7"
+        url "https://github.com/smartrecruiters/rabbitr/releases/download/1.6.0/rabbitr_1.6.0_linux_arm64.tar.gz"
+        sha256 "4ecf9648e2889526c79312114409b6d25de824b4a63d59d5f058e95ececb3a18"
 
         def install
           bin.install "rabbitr"
